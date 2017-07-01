@@ -15,11 +15,6 @@ ATank::ATank()
 	PrimaryActorTick.bCanEverTick = false;
 }
 
-void ATank::Initialise(UTankBarrel* BarrelToSet, UTankTurret* TurretToSet)
-{
-	TankAimingComponent->Initialise(BarrelToSet, TurretToSet);
-	Barrel = BarrelToSet;
-}
 
 // Called when the game starts or when spawned
 void ATank::BeginPlay()
@@ -30,6 +25,7 @@ void ATank::BeginPlay()
 
 void ATank::AimAt(FVector HitLocation)
 {
+	if (!TankAimingComponent) { return; }
 	TankAimingComponent->AimAt(HitLocation, LaunchSpeed);
 }
 
