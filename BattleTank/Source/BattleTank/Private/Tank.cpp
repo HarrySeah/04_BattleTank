@@ -15,7 +15,7 @@ ATank::ATank()
 	PrimaryActorTick.bCanEverTick = false;
 
 	auto TankName = GetName();
-	UE_LOG(LogTemp, Warning, TEXT("%s BP1234: Tanks c++ Construct"),*TankName);
+	UE_LOG(LogTemp, Warning, TEXT("%s DONKEY: Tanks c++ Construct"),*TankName);
 }
 
 
@@ -23,6 +23,9 @@ ATank::ATank()
 void ATank::BeginPlay()
 {
 	Super::BeginPlay(); // Needed for BP BeginPlay to run
+
+	auto TankName = GetName();
+	UE_LOG(LogTemp, Warning, TEXT("%s DONKEY: Tanks c++ Begin Play"), *TankName);
 }
 
 void ATank::AimAt(FVector HitLocation)
