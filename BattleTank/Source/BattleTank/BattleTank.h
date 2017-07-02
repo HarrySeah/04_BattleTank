@@ -4,3 +4,7 @@
 
 #include "CoreMinimal.h"
 #include "Engine/World.h"
+#include "Kismet/GameplayStatics.h"
+#include "ParticleDefinitions.h"
+#include "Particles/ParticleSystem.h"
+#include "Particles/ParticleSystemComponent.h"

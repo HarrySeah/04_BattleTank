@@ -2,7 +2,6 @@
 
 #include "TankAimingComponent.h"
 #include "BattleTank.h"
-#include "Kismet/GameplayStatics.h"
 #include "TankBarrel.h"
 #include "TankTurret.h"
 #include "Projectile.h"
@@ -47,7 +46,7 @@ void UTankAimingComponent::TickComponent(float DeltaTime, enum ELevelTick TickTy
 	}
 }
 
-int UTankAimingComponent::GetRoundsLeft() const
+int32 UTankAimingComponent::GetRoundsLeft() const
 {
 	return RoundsLeft;
 }
